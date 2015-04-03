@@ -2,7 +2,7 @@
 
 # Support Webpage
 
-[www.joaquimley.com/school](www.joaquimley.com/school)
+    [www.joaquimley.com/school](http://www.joaquimley.com/school)
 
 # IMPORTANT
 

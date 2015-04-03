@@ -1,0 +1,50 @@
+<!--
+Created by: Joaquim Ley
+
+This is a open source project that I created to share all the college info I can.
+You are free to use it to study/modify etc. I would only ask you to refere the source.
+
+www.joaquimley.com
+-->
+
+article, section, aside, footer, header, nav {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+header, footer {
+    background-color: pink;
+}
+
+nav{
+    background-color:magenta;
+}
+
+article {
+    background-color: gray;
+    width: 60%;
+    box-sizing:border-box;
+    float:left;
+}
+
+footer {
+    clear:both;
+}
+
+section {
+    background-color: lightgray;
+}
+
+aside {
+    background-color: lightblue;
+    width: 40%;
+    box-sizing:border-box;
+    float: left;
+}
+
+.breaker {
+    clear:both;
+}
+

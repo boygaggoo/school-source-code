@@ -7,9 +7,9 @@
 | www.joaquimley.com                                                                     |
 -----------------------------------------------------------------------------------------|
 
+Started to learn the PHP concept of creating dynamic web pages.
+Solving "Ficha 05.pdf"
 
-Vagrant installation took most of the time (Follow the videos for step-by-step explanation).
-Basic introduction to PHP (please read the 03_IntroPHP_Ver2.pdf found on the "theory" folder for more info).
+Follow HTML5 standard -> http://www.w3.org/TR/html5/
 
-phpinfo() — Outputs information about PHP's configuration
-PHP manual reference: http://php.net/manual/en/function.phpinfo.php
+PSR [PSR-2] conding style -> http://www.php-fig.org/psr/psr-2/

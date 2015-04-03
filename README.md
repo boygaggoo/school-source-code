@@ -1,5 +1,9 @@
 # College Source Code & Documentation
 
+# Support Webpage
+
+[www.joaquimley.com/school](www.joaquimley.com/school)
+
 # IMPORTANT
 
 
@@ -16,7 +20,7 @@ I'm in the process of asking permission to publish some content provided to stud
 * Exams
 
 ###Tools
-1. Adminer - [Website](http://http://www.adminer.org)
+1. Adminer - [Official Website](http://http://www.adminer.org)
     * Database management in a single PHP file.
 2. Vagrant - [Ainet - Class_1](http://joaquimley.com/school/ainet.html#one)
     * Vagrant is a tool for building complete development environments.
@@ -31,8 +35,8 @@ I'm in the process of asking permission to publish some content provided to stud
 Future Releases
 ---------------
 
- * More subjects documentation (only Ainet at the moment)
- * Further improve the already available documentation
+ * Add sources for other subjects (currently building "Ainet" only)
+ * Further improve the already available documentation & code
 
 Contribution guidelines
 -----------------------

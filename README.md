@@ -1,9 +1,9 @@
-J# College Source Code & Documentation
+# College Source Code & Documentation
 
 # IMPORTANT
 
 
-I'm in the process of asking permission to publish some content provided to students (like .PDFs & Tutorial videos), as soon as I have more info.
+I'm in the process of asking permission to publish some content provided to students, I'll update as soon as I have more info.
 
 ## What you will find
 

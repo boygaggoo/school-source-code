@@ -8,7 +8,7 @@ I'm in the process of asking permission to publish some content provided to stud
 ## What you will find
 
 ###All source code
-* Code created will all be available on this repository, along with my notes & explanations.
+* Code created will be available on this repository, along with my notes & explanations.
 
 ###Documentation & Video tutorials (if permission is granted)
 * PDFs

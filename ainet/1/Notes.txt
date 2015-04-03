@@ -1,9 +1,12 @@
-<?php
-phpinfo();
+Created by: Joaquim Ley
 
-phpinfo — Outputs information about PHP's configuration
+This is a open source project that I created to share all the college info I can.
+You are free to use it to study/modify etc. I would only ask you to refere the source.
 
+www.joaquimley.com
+
+Vagrant installation took most of the time (Follow the videos for step-by-step explanation).
+Basic introduction to PHP (please read the 03_IntroPHP_Ver2.pdf found on the "theory" folder for more info).
+
+phpinfo() — Outputs information about PHP's configuration
 PHP manual reference: http://php.net/manual/en/function.phpinfo.php
-
-// TODO
-I'll have to ask my College if it's okay to publish the documents & videos provided to students.

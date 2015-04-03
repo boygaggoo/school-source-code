@@ -1,0 +1,9 @@
+<?php
+phpinfo();
+
+phpinfo — Outputs information about PHP's configuration
+
+PHP manual reference: http://php.net/manual/en/function.phpinfo.php
+
+// TODO
+I'll have to ask my College if it's okay to publish the documents & videos provided to students.

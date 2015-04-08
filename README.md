@@ -27,7 +27,7 @@
 * Integration Systems - [IS](joaquimley.com/school/is.html)
 
 Future Releases
----------------
+-----------------------
 
  * Add sources for other subjects (currently building "Ainet" only)
  * Further improve the already available documentation & code

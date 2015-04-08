@@ -1,0 +1,26 @@
+# a comment - this is ignored
+
+# Eclipse
+bin/
+gen/
+out/
+.idea/
+.settings/
+AndroidManifest.out.xml
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+classes
+gen-external-apklibs
+
+# Gradle
+.gradle
+build
+
+# Other
+tmp
+.DS_Store
+Thumbs.db

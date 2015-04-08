@@ -1,12 +1,9 @@
 # College Source Code & Documentation
 
-# Support Webpage
-
-    [www.joaquimley.com/school](http://www.joaquimley.com/school)
+## Support Webpage
+[www.joaquimley.com/school](http://www.joaquimley.com/school)
 
 # IMPORTANT
-
-
 I'm in the process of asking permission to publish some content provided to students, I'll update as soon as I have more info.
 
 ## What you will find

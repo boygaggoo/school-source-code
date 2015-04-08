@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Schedule Builder</string>
+    <string name="action_settings">Settings</string>
+    <string name="btnAtualizar">Actualizar</string>
+    <string name="title_activity_ucdetalhe">Detalhes da UC</string>
+    <string name="title_activity_turnodetalhe">Detalhes do Turno</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_internetstatus">Estado de Ligação</string>
+    
+    <string name="ucDetalhes_Nome">Nome:</string>
+    <string name="ucDetalhes_Curso">Curso:</string>
+    <string name="ucDetalhes_Ano">Ano:</string>
+    <string name="ucDetalhes_Semestre">Semestre:</string>
+    <string name="ucDetalhes_Docente">Docente Responsavel:</string>
+    <string name="ucDetalhes_Turno">Turnos:</string>
+    <string name="ucDetalhes_HoraInicio">Hora de Inicio:</string>
+    <string name="ucDetalhes_Duracao">Duracao:</string>
+    <string name="ucDetalhes_Sala">Sala:</string>
+    
+    <string name="turnoUC">UC:</string>
+    <string name="turnoTipo">Tipo:</string>
+    <string name="turnoNumero">Numero:</string>
+    <string name="turnoHorario">Horario:</string>
+    <string name="turnoVagas">Vagas:</string>
+	<string name="btnInscrever">Inscrever no Turno</string>
+    
+    
+
+</resources>

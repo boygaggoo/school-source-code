@@ -1,0 +1,175 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".UCDetalheActivity" >
+
+    <TextView
+        android:id="@+id/turnoDetalhes_UC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="22dp"
+        android:text="@string/ucDetalhes_Nome"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/uc_DetalheHoraInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/turnoDetalhes_Tipo"
+        android:layout_marginLeft="22dp"
+        android:layout_toRightOf="@+id/turnoDetalhes_Tipo"
+        android:text="DetalheHoraInicio" />
+
+    <TextView
+        android:id="@+id/turnoDetalhes_Sala"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/turnoDetalhes_Tipo"
+        android:layout_below="@+id/ucDetalhes_Duracao"
+        android:text="@string/ucDetalhes_Sala"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/turno_DetalheTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/uc_DetalheHoraInicio"
+        android:layout_alignTop="@+id/ucDetalhes_Duracao"
+        android:text="DetalheDuracao" />
+
+    <TextView
+        android:id="@+id/turno_DetalheUC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/turnoDetalhes_UC"
+        android:layout_alignBottom="@+id/turnoDetalhes_UC"
+        android:layout_alignLeft="@+id/turno_DetalheVagas"
+        android:layout_alignRight="@+id/uc_DetalheHoraInicio"
+        android:text="DetalheNome" />
+
+    <TextView
+        android:id="@+id/turnoDetalhes_Horario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/turnoDetalhes_UC"
+        android:layout_below="@+id/ucDetalhes_Curso"
+        android:text="@string/ucDetalhes_Ano"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/ucDetalhes_Curso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/turnoDetalhes_Horario"
+        android:layout_below="@+id/turnoDetalhes_UC"
+        android:text="@string/ucDetalhes_Curso"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/TurnoDetalhes_Vagas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/turnoDetalhes_Horario"
+        android:layout_below="@+id/turnoDetalhes_Horario"
+        android:text="@string/ucDetalhes_Semestre"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/turnoDetalhes_Tipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TurnoDetalhes_Vagas"
+        android:layout_below="@+id/TurnoDetalhes_Vagas"
+        android:text="@string/ucDetalhes_HoraInicio"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/ucDetalhes_Duracao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/turnoDetalhes_Tipo"
+        android:layout_below="@+id/turnoDetalhes_Tipo"
+        android:text="@string/ucDetalhes_Duracao"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/turno_DetalheSala"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/turnoDetalhes_Sala"
+        android:layout_alignBottom="@+id/turnoDetalhes_Sala"
+        android:layout_alignLeft="@+id/turno_DetalheHorario"
+        android:layout_alignRight="@+id/uc_DetalheHoraInicio"
+        android:text="DetalheSala" />
+
+    <TextView
+        android:id="@+id/turnoDetalhes_Docente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/turnoDetalhes_Sala"
+        android:layout_below="@+id/turnoDetalhes_Sala"
+        android:text="@string/ucDetalhes_Docente"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/uc_DetalheResponsavel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/turnoDetalhes_Docente"
+        android:layout_alignRight="@+id/uc_DetalheHoraInicio"
+        android:layout_below="@+id/turnoDetalhes_Docente"
+        android:text="DetalheDocente" />
+
+    <TextView
+        android:id="@+id/ucDetalhes_Turno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/uc_DetalheResponsavel"
+        android:layout_below="@+id/uc_DetalheResponsavel"
+        android:text="@string/ucDetalhes_Turno"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ListView
+        android:id="@+id/listViewTurnos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ucDetalhes_Turno"
+        android:layout_alignRight="@+id/uc_DetalheHoraInicio"
+        android:layout_below="@+id/ucDetalhes_Turno" >
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/turno_DetalheHorario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TurnoDetalhes_Vagas"
+        android:layout_alignBottom="@+id/TurnoDetalhes_Vagas"
+        android:layout_alignLeft="@+id/uc_DetalheHoraInicio"
+        android:text="DetalheSemestre" />
+
+    <TextView
+        android:id="@+id/uc_DetalheAno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/turnoDetalhes_Horario"
+        android:layout_alignBottom="@+id/turnoDetalhes_Horario"
+        android:layout_alignLeft="@+id/turno_DetalheVagas"
+        android:text="DetalheAno" />
+
+    <TextView
+        android:id="@+id/turno_DetalheVagas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ucDetalhes_Curso"
+        android:layout_alignBottom="@+id/ucDetalhes_Curso"
+        android:layout_alignLeft="@+id/turno_DetalheHorario"
+        android:text="DetalheCurso" />
+
+</RelativeLayout>

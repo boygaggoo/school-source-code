@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ed9a1722-f428-49a0-b128-62d8b17e77c8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:54317/ServiceePubCloud.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServiceePubCloud.disco" MetadataType="Disco" ID="aee1ebbc-7897-483a-bc4c-ea8aa401228a" SourceId="1" SourceUrl="http://localhost:54317/ServiceePubCloud.svc?disco" />
+    <MetadataFile FileName="ServiceePubCloud.xsd" MetadataType="Schema" ID="f433e0a7-12bc-479e-bc76-acb52c65b66f" SourceId="1" SourceUrl="http://localhost:54317/ServiceePubCloud.svc?xsd=xsd0" />
+    <MetadataFile FileName="ServiceePubCloud1.xsd" MetadataType="Schema" ID="528feb25-e1cb-4615-ae1e-0349c643b518" SourceId="1" SourceUrl="http://localhost:54317/ServiceePubCloud.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServiceePubCloud.wsdl" MetadataType="Wsdl" ID="bb0aee98-6c38-45d6-b4ef-b7f2c228be48" SourceId="1" SourceUrl="http://localhost:54317/ServiceePubCloud.svc?wsdl" />
+    <MetadataFile FileName="ServiceePubCloud2.xsd" MetadataType="Schema" ID="621f4a57-9cc7-4048-909d-3c1b22ac4f14" SourceId="1" SourceUrl="http://localhost:54317/ServiceePubCloud.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,768 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ePubBdModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ePubBdModelStoreContainer">
+    <EntitySet Name="UserSet" EntityType="ePubBdModel.Store.UserSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GenreSet" EntityType="ePubBdModel.Store.GenreSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ChapterSet1" EntityType="ePubBdModel.Store.ChapterSet1" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BookmarkSet" EntityType="ePubBdModel.Store.BookmarkSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FavouriteSet" EntityType="ePubBdModel.Store.FavouriteSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AuthorSet" EntityType="ePubBdModel.Store.AuthorSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PublisherSet" EntityType="ePubBdModel.Store.PublisherSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="eBookSet" EntityType="ePubBdModel.Store.eBookSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GenderSet" EntityType="ePubBdModel.Store.GenderSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AccessSet" EntityType="ePubBdModel.Store.AccessSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LanguageSet" EntityType="ePubBdModel.Store.LanguageSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="eBookAuthor" EntityType="ePubBdModel.Store.eBookAuthor" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="eBookGenre" EntityType="ePubBdModel.Store.eBookGenre" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="eBookFavourite" Association="ePubBdModel.Store.eBookFavourite">
+      <End Role="eBook" EntitySet="eBookSet" />
+      <End Role="Favourite" EntitySet="FavouriteSet" />
+    </AssociationSet>
+    <AssociationSet Name="FavouriteChapter" Association="ePubBdModel.Store.FavouriteChapter">
+      <End Role="Favourite" EntitySet="FavouriteSet" />
+      <End Role="Chapter" EntitySet="ChapterSet1" />
+    </AssociationSet>
+    <AssociationSet Name="ChaptereBook" Association="ePubBdModel.Store.ChaptereBook">
+      <End Role="Chapter" EntitySet="ChapterSet1" />
+      <End Role="eBook" EntitySet="eBookSet" />
+    </AssociationSet>
+    <AssociationSet Name="UserBookmark" Association="ePubBdModel.Store.UserBookmark">
+      <End Role="User" EntitySet="UserSet" />
+      <End Role="Bookmark" EntitySet="BookmarkSet" />
+    </AssociationSet>
+    <AssociationSet Name="ChapterBookmark" Association="ePubBdModel.Store.ChapterBookmark">
+      <End Role="Chapter" EntitySet="ChapterSet1" />
+      <End Role="Bookmark" EntitySet="BookmarkSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_eBookAuthor_eBook" Association="ePubBdModel.Store.FK_eBookAuthor_eBook">
+      <End Role="eBook" EntitySet="eBookSet" />
+      <End Role="eBookAuthor" EntitySet="eBookAuthor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_eBookAuthor_Author" Association="ePubBdModel.Store.FK_eBookAuthor_Author">
+      <End Role="Author" EntitySet="AuthorSet" />
+      <End Role="eBookAuthor" EntitySet="eBookAuthor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_eBookGenre_eBook" Association="ePubBdModel.Store.FK_eBookGenre_eBook">
+      <End Role="eBook" EntitySet="eBookSet" />
+      <End Role="eBookGenre" EntitySet="eBookGenre" />
+    </AssociationSet>
+    <AssociationSet Name="FK_eBookGenre_Genre" Association="ePubBdModel.Store.FK_eBookGenre_Genre">
+      <End Role="Genre" EntitySet="GenreSet" />
+      <End Role="eBookGenre" EntitySet="eBookGenre" />
+    </AssociationSet>
+    <AssociationSet Name="eBookPublisher" Association="ePubBdModel.Store.eBookPublisher">
+      <End Role="eBook" EntitySet="eBookSet" />
+      <End Role="Publisher" EntitySet="PublisherSet" />
+    </AssociationSet>
+    <AssociationSet Name="AccessUser" Association="ePubBdModel.Store.AccessUser">
+      <End Role="Access" EntitySet="AccessSet" />
+      <End Role="User" EntitySet="UserSet" />
+    </AssociationSet>
+    <AssociationSet Name="eBookLanguage" Association="ePubBdModel.Store.eBookLanguage">
+      <End Role="eBook" EntitySet="eBookSet" />
+      <End Role="Language" EntitySet="LanguageSet" />
+    </AssociationSet>
+    <AssociationSet Name="FavouriteUser" Association="ePubBdModel.Store.FavouriteUser">
+      <End Role="Favourite" EntitySet="FavouriteSet" />
+      <End Role="User" EntitySet="UserSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="UserSet">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firstName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="lastName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="gender" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="username" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="lastLogin" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GenreSet">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChapterSet1">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="index" Type="int" Nullable="false" />
+    <Property Name="Bookmark_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BookmarkSet">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="User_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FavouriteSet">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="eBook_id" Type="int" Nullable="true" />
+    <Property Name="Chapter_id" Type="int" Nullable="false" />
+    <Property Name="User_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AuthorSet">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PublisherSet">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="eBookSet">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="folderPath" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="imageUrl" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Chapter_id" Type="int" Nullable="false" />
+    <Property Name="Publisher_id" Type="int" Nullable="false" />
+    <Property Name="Language_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GenderSet">
+    <Key>
+      <PropertyRef Name="Male" />
+    </Key>
+    <Property Name="Male" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Female" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AccessSet">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="type" Type="smallint" Nullable="false" />
+    <Property Name="User_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LanguageSet">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="eBookAuthor">
+    <Key>
+      <PropertyRef Name="eBook_id" />
+      <PropertyRef Name="Author_id" />
+    </Key>
+    <Property Name="eBook_id" Type="int" Nullable="false" />
+    <Property Name="Author_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="eBookGenre">
+    <Key>
+      <PropertyRef Name="eBook_id" />
+      <PropertyRef Name="Genre_id" />
+    </Key>
+    <Property Name="eBook_id" Type="int" Nullable="false" />
+    <Property Name="Genre_id" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="eBookFavourite">
+    <End Role="eBook" Type="ePubBdModel.Store.eBookSet" Multiplicity="0..1" />
+    <End Role="Favourite" Type="ePubBdModel.Store.FavouriteSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="eBook">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Favourite">
+        <PropertyRef Name="eBook_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FavouriteChapter">
+    <End Role="Favourite" Type="ePubBdModel.Store.FavouriteSet" Multiplicity="*" />
+    <End Role="Chapter" Type="ePubBdModel.Store.ChapterSet1" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Chapter">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Favourite">
+        <PropertyRef Name="Chapter_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ChaptereBook">
+    <End Role="Chapter" Type="ePubBdModel.Store.ChapterSet1" Multiplicity="1" />
+    <End Role="eBook" Type="ePubBdModel.Store.eBookSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chapter">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="eBook">
+        <PropertyRef Name="Chapter_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UserBookmark">
+    <End Role="User" Type="ePubBdModel.Store.UserSet" Multiplicity="1" />
+    <End Role="Bookmark" Type="ePubBdModel.Store.BookmarkSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Bookmark">
+        <PropertyRef Name="User_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ChapterBookmark">
+    <End Role="Chapter" Type="ePubBdModel.Store.ChapterSet1" Multiplicity="*" />
+    <End Role="Bookmark" Type="ePubBdModel.Store.BookmarkSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Bookmark">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Chapter">
+        <PropertyRef Name="Bookmark_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="eBookPublisher">
+    <End Role="eBook" Type="ePubBdModel.Store.eBookSet" Multiplicity="*" />
+    <End Role="Publisher" Type="ePubBdModel.Store.PublisherSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Publisher">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="eBook">
+        <PropertyRef Name="Publisher_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AccessUser">
+    <End Role="Access" Type="ePubBdModel.Store.AccessSet" Multiplicity="*" />
+    <End Role="User" Type="ePubBdModel.Store.UserSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Access">
+        <PropertyRef Name="User_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="eBookLanguage">
+    <End Role="eBook" Type="ePubBdModel.Store.eBookSet" Multiplicity="*" />
+    <End Role="Language" Type="ePubBdModel.Store.LanguageSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Language">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="eBook">
+        <PropertyRef Name="Language_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FavouriteUser">
+    <End Role="Favourite" Type="ePubBdModel.Store.FavouriteSet" Multiplicity="*" />
+    <End Role="User" Type="ePubBdModel.Store.UserSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Favourite">
+        <PropertyRef Name="User_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_eBookAuthor_eBook">
+    <End Role="eBook" Type="ePubBdModel.Store.eBookSet" Multiplicity="1" />
+    <End Role="eBookAuthor" Type="ePubBdModel.Store.eBookAuthor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="eBook">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="eBookAuthor">
+        <PropertyRef Name="eBook_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_eBookAuthor_Author">
+    <End Role="eBookAuthor" Type="ePubBdModel.Store.eBookAuthor" Multiplicity="*" />
+    <End Role="Author" Type="ePubBdModel.Store.AuthorSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Author">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="eBookAuthor">
+        <PropertyRef Name="Author_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_eBookGenre_eBook">
+    <End Role="eBook" Type="ePubBdModel.Store.eBookSet" Multiplicity="1" />
+    <End Role="eBookGenre" Type="ePubBdModel.Store.eBookGenre" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="eBook">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="eBookGenre">
+        <PropertyRef Name="eBook_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_eBookGenre_Genre">
+    <End Role="eBookGenre" Type="ePubBdModel.Store.eBookGenre" Multiplicity="*" />
+    <End Role="Genre" Type="ePubBdModel.Store.GenreSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Genre">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="eBookGenre">
+        <PropertyRef Name="Genre_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ePubBdModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="ePubBdModelContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="UserSet" EntityType="ePubBdModel.User" />
+          <EntitySet Name="GenreSet" EntityType="ePubBdModel.Genre" />
+          <EntitySet Name="ChapterSet1" EntityType="ePubBdModel.Chapter" />
+          <EntitySet Name="BookmarkSet" EntityType="ePubBdModel.Bookmark" />
+          <EntitySet Name="FavouriteSet" EntityType="ePubBdModel.Favourite" />
+          <EntitySet Name="AuthorSet" EntityType="ePubBdModel.Author" />
+          <EntitySet Name="PublisherSet" EntityType="ePubBdModel.Publisher" />
+          <EntitySet Name="eBookSet" EntityType="ePubBdModel.eBook" />
+          <EntitySet Name="GenderSet" EntityType="ePubBdModel.Gender" />
+          <AssociationSet Name="eBookFavourite" Association="ePubBdModel.eBookFavourite">
+            <End Role="eBook" EntitySet="eBookSet" />
+            <End Role="Favourite" EntitySet="FavouriteSet" />
+          </AssociationSet>
+          <AssociationSet Name="FavouriteChapter" Association="ePubBdModel.FavouriteChapter">
+            <End Role="Favourite" EntitySet="FavouriteSet" />
+            <End Role="Chapter" EntitySet="ChapterSet1" />
+          </AssociationSet>
+          <AssociationSet Name="ChaptereBook" Association="ePubBdModel.ChaptereBook">
+            <End Role="Chapter" EntitySet="ChapterSet1" />
+            <End Role="eBook" EntitySet="eBookSet" />
+          </AssociationSet>
+          <AssociationSet Name="UserBookmark" Association="ePubBdModel.UserBookmark">
+            <End Role="User" EntitySet="UserSet" />
+            <End Role="Bookmark" EntitySet="BookmarkSet" />
+          </AssociationSet>
+          <AssociationSet Name="ChapterBookmark" Association="ePubBdModel.ChapterBookmark">
+            <End Role="Chapter" EntitySet="ChapterSet1" />
+            <End Role="Bookmark" EntitySet="BookmarkSet" />
+          </AssociationSet>
+          <AssociationSet Name="eBookAuthor" Association="ePubBdModel.eBookAuthor">
+            <End Role="eBook" EntitySet="eBookSet" />
+            <End Role="Author" EntitySet="AuthorSet" />
+          </AssociationSet>
+          <AssociationSet Name="eBookGenre" Association="ePubBdModel.eBookGenre">
+            <End Role="eBook" EntitySet="eBookSet" />
+            <End Role="Genre" EntitySet="GenreSet" />
+          </AssociationSet>
+          <AssociationSet Name="eBookPublisher" Association="ePubBdModel.eBookPublisher">
+            <End Role="eBook" EntitySet="eBookSet" />
+            <End Role="Publisher" EntitySet="PublisherSet" />
+          </AssociationSet>
+          <EntitySet Name="AccessSet" EntityType="ePubBdModel.Access" />
+          <AssociationSet Name="AccessUser" Association="ePubBdModel.AccessUser">
+            <End Role="Access" EntitySet="AccessSet" />
+            <End Role="User" EntitySet="UserSet" />
+          </AssociationSet>
+          <EntitySet Name="LanguageSet" EntityType="ePubBdModel.Language" />
+          <AssociationSet Name="eBookLanguage" Association="ePubBdModel.eBookLanguage">
+            <End Role="eBook" EntitySet="eBookSet" />
+            <End Role="Language" EntitySet="LanguageSet" />
+          </AssociationSet>
+          <AssociationSet Name="FavouriteUser" Association="ePubBdModel.FavouriteUser">
+            <End Role="Favourite" EntitySet="FavouriteSet" />
+            <End Role="User" EntitySet="UserSet" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" cg:SetterAccess="Private" />
+          <Property Type="String" Name="firstName" Nullable="false" />
+          <Property Type="String" Name="lastName" Nullable="false" />
+          <Property Name="email" Type="String" Nullable="false" />
+          <Property Name="gender" Type="String" Nullable="false" />
+          <Property Name="username" Type="String" Nullable="false" />
+          <Property Name="password" Type="String" Nullable="false" cg:SetterAccess="Internal" />
+          <Property Name="lastLogin" Type="Double" Nullable="false" />
+          <NavigationProperty Name="Bookmark" Relationship="ePubBdModel.UserBookmark" FromRole="User" ToRole="Bookmark" />
+          <NavigationProperty Name="Access" Relationship="ePubBdModel.AccessUser" FromRole="User" ToRole="Access" />
+          <NavigationProperty Name="Favourite" Relationship="ePubBdModel.FavouriteUser" FromRole="User" ToRole="Favourite" />
+        </EntityType>
+        <EntityType Name="Genre">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" cg:SetterAccess="Private" />
+          <Property Name="name" Type="String" Nullable="false" />
+          <NavigationProperty Name="eBook" Relationship="ePubBdModel.eBookGenre" FromRole="Genre" ToRole="eBook" />
+        </EntityType>
+        <EntityType Name="Chapter">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" cg:SetterAccess="Private" />
+          <Property Name="title" Type="String" Nullable="false" />
+          <NavigationProperty Name="Favourite" Relationship="ePubBdModel.FavouriteChapter" FromRole="Chapter" ToRole="Favourite" />
+          <NavigationProperty Name="eBook" Relationship="ePubBdModel.ChaptereBook" FromRole="Chapter" ToRole="eBook" />
+          <NavigationProperty Name="Bookmark" Relationship="ePubBdModel.ChapterBookmark" FromRole="Chapter" ToRole="Bookmark" />
+          <Property Name="index" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Bookmark">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" cg:SetterAccess="Private" />
+          <NavigationProperty Name="User" Relationship="ePubBdModel.UserBookmark" FromRole="Bookmark" ToRole="User" />
+          <NavigationProperty Name="Chapter" Relationship="ePubBdModel.ChapterBookmark" FromRole="Bookmark" ToRole="Chapter" />
+        </EntityType>
+        <EntityType Name="Favourite">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" cg:SetterAccess="Private" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+          <NavigationProperty Name="eBook" Relationship="ePubBdModel.eBookFavourite" FromRole="Favourite" ToRole="eBook" />
+          <NavigationProperty Name="Chapter" Relationship="ePubBdModel.FavouriteChapter" FromRole="Favourite" ToRole="Chapter" />
+          <NavigationProperty Name="User" Relationship="ePubBdModel.FavouriteUser" FromRole="Favourite" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Author">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" cg:SetterAccess="Private" />
+          <Property Name="name" Type="String" Nullable="false" />
+          <NavigationProperty Name="eBook" Relationship="ePubBdModel.eBookAuthor" FromRole="Author" ToRole="eBook" />
+        </EntityType>
+        <EntityType Name="Publisher">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" />
+          <NavigationProperty Name="eBook" Relationship="ePubBdModel.eBookPublisher" FromRole="Publisher" ToRole="eBook" />
+        </EntityType>
+        <EntityType Name="eBook">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" cg:SetterAccess="Private" />
+          <Property Name="title" Type="String" Nullable="false" />
+          <Property Name="folderPath" Type="String" Nullable="false" />
+          <Property Name="imageUrl" Type="String" Nullable="false" />
+          <NavigationProperty Name="Favourite" Relationship="ePubBdModel.eBookFavourite" FromRole="eBook" ToRole="Favourite" />
+          <NavigationProperty Name="Chapter" Relationship="ePubBdModel.ChaptereBook" FromRole="eBook" ToRole="Chapter" />
+          <NavigationProperty Name="Author" Relationship="ePubBdModel.eBookAuthor" FromRole="eBook" ToRole="Author" />
+          <NavigationProperty Name="Genre" Relationship="ePubBdModel.eBookGenre" FromRole="eBook" ToRole="Genre" />
+          <NavigationProperty Name="Publisher" Relationship="ePubBdModel.eBookPublisher" FromRole="eBook" ToRole="Publisher" />
+          <NavigationProperty Name="Language" Relationship="ePubBdModel.eBookLanguage" FromRole="eBook" ToRole="Language" />
+        </EntityType>
+        <EntityType Name="Gender">
+          <Key>
+            <PropertyRef Name="Male" />
+          </Key>
+          <Property Name="Male" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Female" Type="String" Nullable="false" />
+        </EntityType>
+        <Association Name="eBookFavourite">
+          <End Type="ePubBdModel.eBook" Role="eBook" Multiplicity="0..1" />
+          <End Type="ePubBdModel.Favourite" Role="Favourite" Multiplicity="*" />
+        </Association>
+        <Association Name="FavouriteChapter">
+          <End Type="ePubBdModel.Favourite" Role="Favourite" Multiplicity="*" />
+          <End Type="ePubBdModel.Chapter" Role="Chapter" Multiplicity="1" />
+        </Association>
+        <Association Name="ChaptereBook">
+          <End Type="ePubBdModel.Chapter" Role="Chapter" Multiplicity="1" />
+          <End Type="ePubBdModel.eBook" Role="eBook" Multiplicity="*" />
+        </Association>
+        <Association Name="UserBookmark">
+          <End Type="ePubBdModel.User" Role="User" Multiplicity="1" />
+          <End Type="ePubBdModel.Bookmark" Role="Bookmark" Multiplicity="*" />
+        </Association>
+        <Association Name="ChapterBookmark">
+          <End Type="ePubBdModel.Chapter" Role="Chapter" Multiplicity="1" />
+          <End Type="ePubBdModel.Bookmark" Role="Bookmark" Multiplicity="1" />
+        </Association>
+        <Association Name="eBookAuthor">
+          <End Type="ePubBdModel.eBook" Role="eBook" Multiplicity="*" />
+          <End Type="ePubBdModel.Author" Role="Author" Multiplicity="*" />
+        </Association>
+        <Association Name="eBookGenre">
+          <End Type="ePubBdModel.eBook" Role="eBook" Multiplicity="*" />
+          <End Type="ePubBdModel.Genre" Role="Genre" Multiplicity="*" />
+        </Association>
+        <Association Name="eBookPublisher">
+          <End Type="ePubBdModel.eBook" Role="eBook" Multiplicity="*" />
+          <End Type="ePubBdModel.Publisher" Role="Publisher" Multiplicity="1" />
+        </Association>
+        <EnumType Name="AccessType" UnderlyingType="Int16" IsFlags="true">
+          <Member Name="Login" Value="1" />
+          <Member Name="Bookmark" Value="2" />
+          <Member Name="Chapter" Value="3" />
+        </EnumType>
+        <EntityType Name="Access">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="User" Relationship="ePubBdModel.AccessUser" FromRole="Access" ToRole="User" />
+          <Property Name="type" Type="Int16" Nullable="false" />
+        </EntityType>
+        <Association Name="AccessUser">
+          <End Type="ePubBdModel.Access" Role="Access" Multiplicity="*" />
+          <End Type="ePubBdModel.User" Role="User" Multiplicity="1" />
+        </Association>
+        <EntityType Name="Language">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" Nullable="false" />
+          <NavigationProperty Name="eBook" Relationship="ePubBdModel.eBookLanguage" FromRole="Language" ToRole="eBook" />
+        </EntityType>
+        <Association Name="eBookLanguage">
+          <End Type="ePubBdModel.eBook" Role="eBook" Multiplicity="*" />
+          <End Type="ePubBdModel.Language" Role="Language" Multiplicity="1" />
+        </Association>
+        <Association Name="FavouriteUser">
+          <End Type="ePubBdModel.Favourite" Role="Favourite" Multiplicity="*" />
+          <End Type="ePubBdModel.User" Role="User" Multiplicity="1" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ePubBdModelStoreContainer" CdmEntityContainer="ePubBdModelContainer">
+    <EntitySetMapping Name="UserSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ePubBdModel.User)">
+        <MappingFragment StoreEntitySet="UserSet">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="lastLogin" ColumnName="lastLogin" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GenreSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ePubBdModel.Genre)">
+        <MappingFragment StoreEntitySet="GenreSet">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChapterSet1">
+      <EntityTypeMapping TypeName="IsTypeOf(ePubBdModel.Chapter)">
+        <MappingFragment StoreEntitySet="ChapterSet1">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="index" ColumnName="index" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BookmarkSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ePubBdModel.Bookmark)">
+        <MappingFragment StoreEntitySet="BookmarkSet">
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FavouriteSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ePubBdModel.Favourite)">
+        <MappingFragment StoreEntitySet="FavouriteSet">
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuthorSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ePubBdModel.Author)">
+        <MappingFragment StoreEntitySet="AuthorSet">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PublisherSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ePubBdModel.Publisher)">
+        <MappingFragment StoreEntitySet="PublisherSet">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="eBookSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ePubBdModel.eBook)">
+        <MappingFragment StoreEntitySet="eBookSet">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="folderPath" ColumnName="folderPath" />
+          <ScalarProperty Name="imageUrl" ColumnName="imageUrl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GenderSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ePubBdModel.Gender)">
+        <MappingFragment StoreEntitySet="GenderSet">
+          <ScalarProperty Name="Male" ColumnName="Male" />
+          <ScalarProperty Name="Female" ColumnName="Female" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccessSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ePubBdModel.Access)">
+        <MappingFragment StoreEntitySet="AccessSet">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LanguageSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ePubBdModel.Language)">
+        <MappingFragment StoreEntitySet="LanguageSet">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="eBookFavourite" TypeName="ePubBdModel.eBookFavourite" StoreEntitySet="FavouriteSet">
+      <EndProperty Name="eBook">
+        <ScalarProperty Name="id" ColumnName="eBook_id" />
+      </EndProperty>
+      <EndProperty Name="Favourite">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+      <Condition ColumnName="eBook_id" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FavouriteChapter" TypeName="ePubBdModel.FavouriteChapter" StoreEntitySet="FavouriteSet">
+      <EndProperty Name="Chapter">
+        <ScalarProperty Name="id" ColumnName="Chapter_id" />
+      </EndProperty>
+      <EndProperty Name="Favourite">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ChaptereBook" TypeName="ePubBdModel.ChaptereBook" StoreEntitySet="eBookSet">
+      <EndProperty Name="Chapter">
+        <ScalarProperty Name="id" ColumnName="Chapter_id" />
+      </EndProperty>
+      <EndProperty Name="eBook">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="UserBookmark" TypeName="ePubBdModel.UserBookmark" StoreEntitySet="BookmarkSet">
+      <EndProperty Name="User">
+        <ScalarProperty Name="id" ColumnName="User_id" />
+      </EndProperty>
+      <EndProperty Name="Bookmark">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ChapterBookmark" TypeName="ePubBdModel.ChapterBookmark" StoreEntitySet="ChapterSet1">
+      <EndProperty Name="Bookmark">
+        <ScalarProperty Name="id" ColumnName="Bookmark_id" />
+      </EndProperty>
+      <EndProperty Name="Chapter">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="eBookAuthor" TypeName="ePubBdModel.eBookAuthor" StoreEntitySet="eBookAuthor">
+      <EndProperty Name="eBook">
+        <ScalarProperty Name="id" ColumnName="eBook_id" />
+      </EndProperty>
+      <EndProperty Name="Author">
+        <ScalarProperty Name="id" ColumnName="Author_id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="eBookGenre" TypeName="ePubBdModel.eBookGenre" StoreEntitySet="eBookGenre">
+      <EndProperty Name="eBook">
+        <ScalarProperty Name="id" ColumnName="eBook_id" />
+      </EndProperty>
+      <EndProperty Name="Genre">
+        <ScalarProperty Name="id" ColumnName="Genre_id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="eBookPublisher" TypeName="ePubBdModel.eBookPublisher" StoreEntitySet="eBookSet">
+      <EndProperty Name="Publisher">
+        <ScalarProperty Name="id" ColumnName="Publisher_id" />
+      </EndProperty>
+      <EndProperty Name="eBook">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AccessUser" TypeName="ePubBdModel.AccessUser" StoreEntitySet="AccessSet">
+      <EndProperty Name="User">
+        <ScalarProperty Name="id" ColumnName="User_id" />
+      </EndProperty>
+      <EndProperty Name="Access">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="eBookLanguage" TypeName="ePubBdModel.eBookLanguage" StoreEntitySet="eBookSet">
+      <EndProperty Name="Language">
+        <ScalarProperty Name="id" ColumnName="Language_id" />
+      </EndProperty>
+      <EndProperty Name="eBook">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FavouriteUser" TypeName="ePubBdModel.FavouriteUser" StoreEntitySet="FavouriteSet">
+      <EndProperty Name="User">
+        <ScalarProperty Name="id" ColumnName="User_id" />
+      </EndProperty>
+      <EndProperty Name="Favourite">
+        <ScalarProperty Name="id" ColumnName="id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

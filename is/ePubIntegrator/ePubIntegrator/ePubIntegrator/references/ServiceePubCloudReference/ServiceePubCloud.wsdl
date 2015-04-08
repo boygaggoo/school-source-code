@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceePubCloud" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:54317/ServiceePubCloud.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:54317/ServiceePubCloud.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:54317/ServiceePubCloud.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ServiceePubCloud" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceePubCloud_GetServiceCurrentTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceCurrentTime" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_GetServiceCurrentTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceCurrentTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_RegisterUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_RegisterUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_DeleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_DeleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_CreateEbookRegistry_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateEbookRegistry" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_CreateEbookRegistry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateEbookRegistryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_DeleteEbookRegistry_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEbookRegistry" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_DeleteEbookRegistry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEbookRegistryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_CreateBookmark_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateBookmark" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_CreateBookmark_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateBookmarkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_DeleteBookmark_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBookmark" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_DeleteBookmark_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBookmarkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_CreateFavouriteChapter_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFavouriteChapter" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_CreateFavouriteChapter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFavouriteChapterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_DeleteFavouriteChapter_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFavouriteChapter" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_DeleteFavouriteChapter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFavouriteChapterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_CreateFavouriteEbook_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFavouriteEbook" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_CreateFavouriteEbook_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFavouriteEbookResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_DeleteFavouriteEbook_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFavouriteEbook" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_DeleteFavouriteEbook_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFavouriteEbookResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_CreateAuthor_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAuthor" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_CreateAuthor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAuthorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_DeleteAuthor_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAuthor" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_DeleteAuthor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAuthorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_CreatePublisher_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePublisher" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_CreatePublisher_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePublisherResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_DeletePublisher_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePublisher" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_DeletePublisher_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePublisherResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_CreateLanguage_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateLanguage" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_CreateLanguage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateLanguageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_DeleteLanguage_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteLanguage" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_DeleteLanguage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteLanguageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_CreateAccess_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAccess" />
+  </wsdl:message>
+  <wsdl:message name="IServiceePubCloud_CreateAccess_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAccessResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceePubCloud">
+    <wsdl:operation name="GetServiceCurrentTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceePubCloud/GetServiceCurrentTime" message="tns:IServiceePubCloud_GetServiceCurrentTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceePubCloud/GetServiceCurrentTimeResponse" message="tns:IServiceePubCloud_GetServiceCurrentTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceePubCloud/RegisterUser" message="tns:IServiceePubCloud_RegisterUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceePubCloud/RegisterUserResponse" message="tns:IServiceePubCloud_RegisterUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceePubCloud/DeleteUser" message="tns:IServiceePubCloud_DeleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceePubCloud/DeleteUserResponse" message="tns:IServiceePubCloud_DeleteUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceePubCloud/Login" message="tns:IServiceePubCloud_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceePubCloud/LoginResponse" message="tns:IServiceePubCloud_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateEbookRegistry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceePubCloud/CreateEbookRegistry" message="tns:IServiceePubCloud_CreateEbookRegistry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceePubCloud/CreateEbookRegistryResponse" message="tns:IServiceePubCloud_CreateEbookRegistry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEbookRegistry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceePubCloud/DeleteEbookRegistry" message="tns:IServiceePubCloud_DeleteEbookRegistry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceePubCloud/DeleteEbookRegistryResponse" message="tns:IServiceePubCloud_DeleteEbookRegistry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateBookmark">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceePubCloud/CreateBookmark" message="tns:IServiceePubCloud_CreateBookmark_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceePubCloud/CreateBookmarkResponse" message="tns:IServiceePubCloud_CreateBookmark_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBookmark">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceePubCloud/DeleteBookmark" message="tns:IServiceePubCloud_DeleteBookmark_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceePubCloud/DeleteBookmarkResponse" message="tns:IServiceePubCloud_DeleteBookmark_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFavouriteChapter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceePubCloud/CreateFavouriteChapter" message="tns:IServiceePubCloud_CreateFavouriteChapter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceePubCloud/CreateFavouriteChapterResponse" message="tns:IServiceePubCloud_CreateFavouriteChapter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFavouriteChapter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceePubCloud/DeleteFavouriteChapter" message="tns:IServiceePubCloud_DeleteFavouriteChapter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceePubCloud/DeleteFavouriteChapterResponse" message="tns:IServiceePubCloud_DeleteFavouriteChapter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFavouriteEbook">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceePubCloud/CreateFavouriteEbook" message="tns:IServiceePubCloud_CreateFavouriteEbook_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceePubCloud/CreateFavouriteEbookResponse" message="tns:IServiceePubCloud_CreateFavouriteEbook_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFavouriteEbook">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceePubCloud/DeleteFavouriteEbook" message="tns:IServiceePubCloud_DeleteFavouriteEbook_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceePubCloud/DeleteFavouriteEbookResponse" message="tns:IServiceePubCloud_DeleteFavouriteEbook_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAuthor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceePubCloud/CreateAuthor" message="tns:IServiceePubCloud_CreateAuthor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceePubCloud/CreateAuthorResponse" message="tns:IServiceePubCloud_CreateAuthor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAuthor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceePubCloud/DeleteAuthor" message="tns:IServiceePubCloud_DeleteAuthor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceePubCloud/DeleteAuthorResponse" message="tns:IServiceePubCloud_DeleteAuthor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePublisher">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceePubCloud/CreatePublisher" message="tns:IServiceePubCloud_CreatePublisher_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceePubCloud/CreatePublisherResponse" message="tns:IServiceePubCloud_CreatePublisher_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePublisher">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceePubCloud/DeletePublisher" message="tns:IServiceePubCloud_DeletePublisher_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceePubCloud/DeletePublisherResponse" message="tns:IServiceePubCloud_DeletePublisher_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateLanguage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceePubCloud/CreateLanguage" message="tns:IServiceePubCloud_CreateLanguage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceePubCloud/CreateLanguageResponse" message="tns:IServiceePubCloud_CreateLanguage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLanguage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceePubCloud/DeleteLanguage" message="tns:IServiceePubCloud_DeleteLanguage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceePubCloud/DeleteLanguageResponse" message="tns:IServiceePubCloud_DeleteLanguage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAccess">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceePubCloud/CreateAccess" message="tns:IServiceePubCloud_CreateAccess_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceePubCloud/CreateAccessResponse" message="tns:IServiceePubCloud_CreateAccess_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceePubCloud" type="tns:IServiceePubCloud">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetServiceCurrentTime">
+      <soap:operation soapAction="http://tempuri.org/IServiceePubCloud/GetServiceCurrentTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceePubCloud/RegisterUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="http://tempuri.org/IServiceePubCloud/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IServiceePubCloud/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateEbookRegistry">
+      <soap:operation soapAction="http://tempuri.org/IServiceePubCloud/CreateEbookRegistry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEbookRegistry">
+      <soap:operation soapAction="http://tempuri.org/IServiceePubCloud/DeleteEbookRegistry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateBookmark">
+      <soap:operation soapAction="http://tempuri.org/IServiceePubCloud/CreateBookmark" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBookmark">
+      <soap:operation soapAction="http://tempuri.org/IServiceePubCloud/DeleteBookmark" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFavouriteChapter">
+      <soap:operation soapAction="http://tempuri.org/IServiceePubCloud/CreateFavouriteChapter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFavouriteChapter">
+      <soap:operation soapAction="http://tempuri.org/IServiceePubCloud/DeleteFavouriteChapter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFavouriteEbook">
+      <soap:operation soapAction="http://tempuri.org/IServiceePubCloud/CreateFavouriteEbook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFavouriteEbook">
+      <soap:operation soapAction="http://tempuri.org/IServiceePubCloud/DeleteFavouriteEbook" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAuthor">
+      <soap:operation soapAction="http://tempuri.org/IServiceePubCloud/CreateAuthor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAuthor">
+      <soap:operation soapAction="http://tempuri.org/IServiceePubCloud/DeleteAuthor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePublisher">
+      <soap:operation soapAction="http://tempuri.org/IServiceePubCloud/CreatePublisher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePublisher">
+      <soap:operation soapAction="http://tempuri.org/IServiceePubCloud/DeletePublisher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateLanguage">
+      <soap:operation soapAction="http://tempuri.org/IServiceePubCloud/CreateLanguage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLanguage">
+      <soap:operation soapAction="http://tempuri.org/IServiceePubCloud/DeleteLanguage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAccess">
+      <soap:operation soapAction="http://tempuri.org/IServiceePubCloud/CreateAccess" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceePubCloud">
+    <wsdl:port name="BasicHttpBinding_IServiceePubCloud" binding="tns:BasicHttpBinding_IServiceePubCloud">
+      <soap:address location="http://localhost:54317/ServiceePubCloud.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

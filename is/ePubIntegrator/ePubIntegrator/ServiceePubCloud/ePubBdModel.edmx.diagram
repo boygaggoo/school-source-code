@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6b283ddd1e3c476e8cb1b2e6bd6d7813" Name="Diagram1" ZoomLevel="62" >
+        <EntityTypeShape EntityType="ePubBdModel.User" Width="1.5" PointX="4.375" PointY="2.75" />
+        <EntityTypeShape EntityType="ePubBdModel.Genre" Width="1.5" PointX="8.875" PointY="7" />
+        <EntityTypeShape EntityType="ePubBdModel.Chapter" Width="1.5" PointX="5.375" PointY="7" />
+        <EntityTypeShape EntityType="ePubBdModel.Bookmark" Width="1.5" PointX="3.625" PointY="7" />
+        <EntityTypeShape EntityType="ePubBdModel.Favourite" PointX="6.5" PointY="4.625" Width="1.5" />
+        <EntityTypeShape EntityType="ePubBdModel.Author" Width="1.5" PointX="7.125" PointY="7" />
+        <EntityTypeShape EntityType="ePubBdModel.Publisher" Width="1.5" PointX="10.625" PointY="7" />
+        <EntityTypeShape EntityType="ePubBdModel.eBook" Width="1.5" PointX="9.75" PointY="2.75" />
+        <AssociationConnector Association="ePubBdModel.eBookFavourite" />
+        <AssociationConnector Association="ePubBdModel.FavouriteChapter" />
+        <AssociationConnector Association="ePubBdModel.ChaptereBook" />
+        <AssociationConnector Association="ePubBdModel.UserBookmark" />
+        <AssociationConnector Association="ePubBdModel.ChapterBookmark" />
+        <AssociationConnector Association="ePubBdModel.eBookAuthor" />
+        <AssociationConnector Association="ePubBdModel.eBookGenre" />
+        <AssociationConnector Association="ePubBdModel.eBookPublisher" />
+        <EntityTypeShape EntityType="ePubBdModel.Access" Width="1.5" PointX="6.5" PointY="2.75" />
+        <AssociationConnector Association="ePubBdModel.AccessUser" />
+        <EntityTypeShape EntityType="ePubBdModel.Language" Width="1.5" PointX="12.375" PointY="7" />
+        <AssociationConnector Association="ePubBdModel.eBookLanguage" />
+        <AssociationConnector Association="ePubBdModel.FavouriteUser" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

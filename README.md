@@ -1,15 +1,11 @@
 # College Source Code & Documentation
 
-## Support Webpage
-[www.joaquimley.com/school](http://www.joaquimley.com/school)
-
-# IMPORTANT
-I'm in the process of asking permission to publish some content provided to students, I'll update as soon as I have more info.
+## Support Webpage - [joaquimley.com/school](http://www.joaquimley.com/school)
 
 ## What you will find
 
-###All source code
-* Code created will be available on this repository, along with my notes & explanations.
+### Source code
+* Code created during class available on this repository, along with my personal notes & explanations.
 
 ###Documentation & Video tutorials (if permission is granted)
 * PDFs
@@ -67,3 +63,6 @@ Joaquim Ley - [joaquimley.com](http://www.joaquimley.com)
     Previous autorization is required -> me@joaquimley.com
 
     THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.`
+
+## IMPORTANT
+I'm in the process of asking permission to publish some content provided to students, I'll update as soon as I have more info.

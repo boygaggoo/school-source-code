@@ -24,6 +24,7 @@
 * Artificial Intelligence - [IA](joaquimley.com/school/ia.html)
 * Database Management Systems - [SBD](joaquimley.com/school/sbd.html)
 * Decision Support Systems - [SAD](joaquimley.com/school/sad.html)
+* Software Engineering - [ESoftII](joaquimley.com/school/esoft2.html)
 
 Future Releases
 ---------------

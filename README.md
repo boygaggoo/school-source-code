@@ -1,15 +1,16 @@
 # College Source Code & Documentation
 
 ## What you will find
-###[joaquimley.com/school](http://www.joaquimley.com/school)
+###Website - [joaquimley.com/school](http://www.joaquimley.com/school)
 
 ### Source code
 * Code created during class available on this repository, along with my personal notes & explanations.
 
 ###Documentation & Video tutorials (if permission is granted)
-* PDFs
+* Exercise PDFs
 * Video Tutorials
 * Exams
+* Examples and Sprints
 
 ###Tools
 1. Adminer - [Official Website](http://http://www.adminer.org)
@@ -24,7 +25,7 @@
 * Database Management Systems - [SBD](joaquimley.com/school/sbd.html)
 * Decision Support Systems - [SAD](joaquimley.com/school/sad.html)
 * Software Engineering II - [ESoftII](joaquimley.com/school/esoft2.html)
-* Integration Systems - [IS](joaquimley.com/school/is.html)
+* Systems Integration - [IS](joaquimley.com/school/is.html)
 
 Future Releases
 -----------------------
@@ -55,15 +56,27 @@ Joaquim Ley - <me@joaquimley.com>
 Joaquim Ley - [joaquimley.com](http://www.joaquimley.com)
 
 #License
+    The MIT License (MIT)
 
-    Copyright (c) 2015 Joaquim Ley
+    Copyright (c) 2015 Joaquim Ley <me@joaquimley.com>
 
-    Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
 
-    The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-    Previous autorization is required -> me@joaquimley.com
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
 
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.`
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.`
 
 ## IMPORTANT
 I'm in the process of asking permission to publish some content provided to students, I'll update as soon as I have more info.

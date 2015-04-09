@@ -76,7 +76,7 @@ Joaquim Ley - [joaquimley.com](http://www.joaquimley.com)
     AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-    SOFTWARE.`
+    SOFTWARE.
 
 ## IMPORTANT
 I'm in the process of asking permission to publish some content provided to students, I'll update as soon as I have more info.
